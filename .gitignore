@@ -1,0 +1,9 @@
+# Personal settings (contains your private ntfy topic)
+.termnotify.conf
+
+# Build / OS clutter
+*.zip
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
