@@ -5,7 +5,7 @@ Prompt, with your phone buzzing when a long command finishes.
 
 # TermNotify📱🔔
 Get a push notification on your phone (**iPhone or Android**) when a
-terminal command that ran for **1 minute or more** finishes. Start a
+terminal command that ran for **3 seconds or more** finishes. Start a
 long build, upload, or training run, walk away, and your phone tells
 you when it's done and whether it worked. It hooks into **PowerShell**
 (5.1 and 7, including the **VS Code** terminal and Windows Terminal)
@@ -25,7 +25,7 @@ through the free **ntfy** service, with no account needed.
 3. Answer **Y** to "Send a test notification". Your phone should buzz.
 4. Close and reopen your terminals, including VS Code.
 
-Try it: run `Start-Sleep 65` in PowerShell, or `timeout /t 65` in
+Try it: run `Start-Sleep 5` in PowerShell, or `timeout /t 5` in
 Command Prompt, then wait for your phone.
 
 | Your phone | Get the app | First-time setup |
@@ -52,7 +52,7 @@ TermNotify/
 ---
 
 ## ⚙️ Features
-* **Notifies you about long commands.** Anything that runs 60 seconds
+* **Notifies you about long commands.** Anything that runs 3 seconds
   or more (you can change the limit) sends a notification when it ends.
 * **Tells you how it went:**
   * ✅ **Done in 2m 14s**: finished successfully
@@ -82,7 +82,7 @@ TermNotify/
 
 ## 🚀 How to Use It
 Once installed there's nothing to run. Work in your terminal as usual,
-and any command that takes a minute or longer notifies your phone when
+and any command that takes 3 seconds or longer notifies your phone when
 it ends.
 
 PowerShell commands (including the VS Code terminal):
@@ -102,7 +102,7 @@ Edit `%USERPROFILE%\.termnotify.conf` (for example
 
 | Setting            | Default | Meaning |
 |--------------------|---------|---------|
-| `TN_THRESHOLD`     | `60`    | Minimum run time, in seconds, before a command notifies |
+| `TN_THRESHOLD`     | `3`     | Minimum run time, in seconds, before a command notifies |
 | `TN_IGNORE`        | `ssh vim nano less ...` | Programs that never notify |
 | `TN_IGNORE_BARE`   | `python node pwsh ...`  | Ignored only when run with no arguments |
 | `TN_RETRY_MINUTES` | `30`    | How long to keep retrying while the PC is offline (`0` = try once) |
